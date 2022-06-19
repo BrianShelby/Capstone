@@ -2,7 +2,7 @@
 
 ## Overview
 
-The YouVote Capstone project is being created to help American voters learn more about their local political leaders, learn how to create and submit petitions, and learn out how to register to vote. The YouVote single page web application will have a landing page that welcomes the user with up-coming election information, statistics and a historical timeline of major laws that have been inacted over past decades to the current.
+The YouVote Capstone project is being created to help American voters learn more about their local political leaders, learn how to create and submit petitions, and learn out how to register to vote. The YouVote single page web application will have a landing page that welcomes the user with up-coming election information, statistics and a historical timeline of major laws that have been inacted over past decades and current.
 
 In addition to a '.gitignore' and some VS Code specific extensions and settings, it includes the 'recommended' settings for:
 
