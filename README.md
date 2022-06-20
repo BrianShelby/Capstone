@@ -18,7 +18,11 @@ The search bar will be the most important feature of the YouVote web application
 
 The petition will have forms with questions to guide the user through the petition creation process. The questions will consists of the following.
 
-1
+1. Title of petition
+2. Explain Subject of petition
+3. Add a photo
+4. Add phone number
+5. Publish petition
 
 ## Register to Vote
 
