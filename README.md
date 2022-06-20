@@ -29,3 +29,5 @@ The petition will have forms with questions to guide the user through the petiti
 The [register to vote](https://www.youtube.com/embed/JAI9vuvCads) page will have an embedded youtube video explaining the steps on how to register. The page will also include links to external web pages
 
 ## Join Mailing List
+
+The mailing list will help keep the voters informed of any new and upcoming bills by sending out notifications via email.
