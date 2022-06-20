@@ -4,7 +4,7 @@
 
 The YouVote Capstone project is being created to help American voters learn more about their local political leaders, learn how to create and submit petitions, and learn out how to register to vote. The YouVote single page web application will have a landing page that welcomes the user with up-coming election information, statistics and historical timelines of major laws that have been inacted over past decades and current laws as well.
 
-In addition to a '.gitignore' and some VS Code specific extensions and settings, it includes the 'recommended' settings for:
+The YouVote Web Application will consist of three main navigation links and a main search bar to help voters search for legislative leaders in their area.
 
 1. [ESLint](eslint.org)
 2. [Stylelint](stylelint.io)
