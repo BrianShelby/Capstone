@@ -26,6 +26,6 @@ The petition will have forms with questions to guide the user through the petiti
 
 ## Register to Vote
 
-The [register to vote] (https://www.youtube.com/embed/JAI9vuvCads) page will have an embedded youtube video explaining the steps on how to register. <iframe width="696" height="396" src="https://www.youtube.com/embed/JAI9vuvCads" title="First Time Voter" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+The [register to vote](https://www.youtube.com/embed/JAI9vuvCads) page will have an embedded youtube video explaining the steps on how to register. <iframe width="696" height="396" src="https://www.youtube.com/embed/JAI9vuvCads" title="First Time Voter" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Join Mailing List
