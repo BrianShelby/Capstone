@@ -10,7 +10,7 @@ The YouVote Web Application will consist of three main navigation links and a ma
 2. `Register to Vote`
 3. `Join Mailing List`
 
-## Get Started
+## Search Bar
 
 **First and foremost,** make sure that your local machine is set up with all of the 'dev environment tooling' as per the instructions in the curriculum.
 
