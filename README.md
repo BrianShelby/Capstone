@@ -16,6 +16,10 @@ The search bar will be the most important feature of the YouVote web application
 
 ## Start a Petition
 
+The petition will have forms with questions to guide the user through the petition creation process. The questions will consists of the following.
+
+1
+
 ## Register to Vote
 
 ## Join Mailing List
