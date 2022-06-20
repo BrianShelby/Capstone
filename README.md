@@ -6,7 +6,7 @@ The YouVote Capstone project is being created to help American voters learn more
 
 The YouVote Web Application will consist of three main navigation links and a main search bar to help voters search for legislative leaders in their area. The three links will be named below.
 
-1. Start a petition
+1. `Start a petition`
 2. [Stylelint](stylelint.io)
 3. [Prettier](prettier.io)
 
