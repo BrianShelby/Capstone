@@ -6,6 +6,7 @@
 
 body{
   background-color: midnightblue;
+  font-family: Montserrat;
 }
 
 .back-video {
@@ -38,7 +39,7 @@ header{
 
 .nav-links li{
   display: inline-block;
-  padding: 0px 10px;
+  padding: 0 10px ;
 }
 
 .nav-links li a{
@@ -59,21 +60,74 @@ header{
   font-size: 22px;
 }
 
-.container{
-  border: 1px solid #fff;
-  padding: 20px 0 400px 0;
-  margin: 100px 50px 0 50px;
-  background-color: midnightblue;
-  width: auto;
-  opacity: 35%;
-}
-
 #heading{
   display: flex;
   justify-content: center;
   color: #fff;
-  font-size: 1.75em;
+  font-size: 2.5rem;
   text-align: center;
+}
+
+.grid-container{
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.grid-container > div{
+  text-align: center;
+  padding: 20px;
+}
+
+.grid-container > div:nth-child(1){
+  grid-column: 1 / span 2;
+}
+
+.grid-container > div:nth-child(2){
+  grid-column: span 3;
+  height: 100px;
+}
+
+.grid-container > div:nth-child(3){
+  grid-column: span 1;
+}
+
+.grid-container > div:nth-child(4){
+  grid-column: 2 / 6;
+  height: auto;
+  color: #fff;
+  /* border: 1px solid #fff; */
+
+}
+
+.grid-container > div:nth-child(5){
+  grid-column: 2 /4 ;
+  color: #fff;
+  /* border: 1px solid #fff; */
+}
+
+.grid-container > div:nth-child(6){
+  grid-column: 4 /6 ;
+  color: #fff;
+  /* border: 1px solid #fff; */
+}
+
+.search-heading{
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.input-wrapper{
+  display: flex;
+  flex-direction: column;
+}
+
+.search-button{
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  margin-top: 5px;
 }
 
 @media screen and (max-width: 767px){
@@ -103,6 +157,16 @@ header{
       width: auto;
       height: 100%;
     }
+
+@media (max-width: 431px){
+  .search-heading{
+    font-size: 13px;
+  }
+}
+
+
+
+
 
 
 
