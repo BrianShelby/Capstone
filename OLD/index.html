@@ -12,75 +12,44 @@
   <script src="https://kit.fontawesome.com/b924e50388.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
 </head>
-
 <body>
 
-<header>
-    <a href="index.html"><img id="logo" src="logo.png"></a>
-    <video autoplay loop muted plays-inline class="back-video">
-      <source src="usaFlag.mp4" type="video/mp4">
-    </video>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="index.html">HOME</a></li>
-        <li><a href="petition.html">FILE PETITION</a></li>
-        <li><a href="register.html">REGISTER TO VOTE</a></li>
-        <li><a href="mailing.html">MAILING LIST</a></li>
-      </ul>
-      <div class="hamburger">
-        <i class="fas fa-bars"></i>
+  <header>
+    <a href="index.html"><img class="logo" src="logo.png"></a>
+    <div class="menu">
+      <div class="btn">
+        <i class="fas fa-times close-btn"></i>
       </div>
-    </nav>
-</header>
-<div class="grid-container">
-  <div></div><!-- Spacer -->
-  <div></div><!-- Spacer -->
-  <div></div><!-- Spacer -->
-  <div>
-    <h1>Welcome To YouVote!</h1>
-    YouVote is a place where you can track bills, review upcoming legislation, and see how your local representatives are voting in your state. Learn how to file a petition. Learn how to register to vote. Join our mailing list to stay informed and share your feedback about our site.
-  </div>
-  <div>
-    <h3 class="search-heading">Search Legislation</h3>
-    <div class="input-wrapper">
-      <input type="text" placeholder="Coronavirus, Transportation, etc." />
-      <button class="search-button">Search</button>
+      <a href="index.html">HOME</a>
+      <a href="petition.html">PETITION</a>
+      <a href="bio.html">BIO</a>
+      <a href="contact.html">CONTACT</a>
+      </div>
+<div class="btn">
+  <i class="fas fa-bars menu-btn"></i>
     </div>
-  </div>
-  <div>
-    <h3 class="search-heading">Search Legislators</h3>
-    <div class="input-wrapper">
-      <input type="text" placeholder="Enter Zip Code" />
-      <button class="search-button">Search</button>
-    </div>
-  </div>
-  <div class="footer-spacer"></div><!-- Spacer -->
-  <div class="footer-spacer"></div><!-- Spacer -->
-  <div class="footer-spacer"></div><!-- Spacer -->
-  <div class="footer-spacer"></div><!-- Spacer -->
-  <div class="footer-spacer"></div><!-- Spacer -->
-  <div class="footer-spacer"></div><!-- Spacer -->
-  <div>
-    <footer class="footer">Social Media</footer>
-  </div>
-</div>
+  </header>
 
-<script src="index.js"></script>
+  <section class="section-main">
+    <h1>Welcome To YouVote</h1>
+      <form action="" class="main-search">
+        <input type="text" placeholder="Enter Zip Code - Search For State Legislators">
+        <button type="submit"><img src="search.png"></button>
+      </form>
+  </section>
+  <section class="section-two">
+    <h2>Search For State Legislators</h2>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae cumque dignissimos, aut molestiae aliquam laboriosam nesciunt voluptas molestias deleniti iure obcaecati qui sunt nostrum dolor eum ratione, esse, exercitationem id!</p>
+      <h2>File A Petition</h2>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae cumque dignissimos, aut molestiae aliquam laboriosam nesciunt voluptas molestias deleniti iure obcaecati qui sunt nostrum dolor eum ratione, esse, exercitationem id!</p>
+    <h2>Review upcoming legislation</h2>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae cumque dignissimos, aut molestiae aliquam laboriosam nesciunt voluptas molestias deleniti iure obcaecati qui sunt nostrum dolor eum ratione, esse, exercitationem id!</p>
+  </section>
+
+  <footer>
+    &copy; 2022 <a href="index.html">YouVote.com</a>
+  </footer>
+
+  <script src="index.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <body>
-<div id="root"></div>
-<script type="module" src="index.js"></script> -->
-

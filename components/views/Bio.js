@@ -4,7 +4,7 @@ import Bio1 from "../../assets/img/Bio1.jpg";
 export default () => html`
   <section class="section-main">
     <h1>Brian Shelby Bio</h1>
-    <div><img class="bioPic" src="${Bio1.jpg}" alt="" /></div>
+    <div><img class="bioPic" src="${Bio1}" alt="" /></div>
     <h2>
       Each initiative and referendum state employs a different procedure for
       filing petition applications. Some states require preliminary signatures
