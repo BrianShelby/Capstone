@@ -1,6 +1,6 @@
 import html from "html-literal";
 import * as links from "../store/Links";
-import logo from "../../assets/img/logo.png";
+import logo from "../assets/img/logo.png";
 
 export default state => html`
   <header>
