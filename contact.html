@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouVote</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/b924e50388.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
+</head>
+<body>
+
+  <header>
+    <a href="index.html"><img class="logo" src="logo.png"></a>
+    <div class="menu">
+      <div class="btn">
+        <i class="fas fa-times close-btn"></i>
+      </div>
+      <a href="index.html">HOME</a>
+      <a href="petition.html">PETITION</a>
+      <a href="bio.html">BIO</a>
+      <a href="contact.html">CONTACT</a>
+      </div>
+<div class="btn">
+  <i class="fas fa-bars menu-btn"></i>
+    </div>
+  </header>
+
+  <section class="section-main">
+    <h1>Contact Me</h1>
+    <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xlezqldg" method="post">
+      <fieldset id="fs-frm-inputs">
+        <label for="full-name">Full Name</label>
+        <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
+        <label for="email-address">Email Address</label>
+        <input type="email" name="_reply" id="email-address" placeholder="youremail@xxxx.com" required="">
+        <label for="message">Message</label>
+        <textarea rows="5" name="message" id="message" placeholder="Type message here..." required=""></textarea>
+        <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+      </fieldset>
+      <input type="submit" value="Submit">
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2022 <a href="index.html">YouVote.com</a>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>

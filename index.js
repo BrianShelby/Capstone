@@ -1,34 +1,49 @@
-import { Header, Nav, Main, Footer } from "./components";
-import * as store from "./store";
-import Navigo from "navigo";
-import { capitalize } from "lodash";
+// import { Header, Main, Footer } from "./components";
+// import * as store from "./store";
+// import Navigo from "navigo";
+// import { capitalize } from "lodash";
+// import axios from "axios";
+// import dotenv from "dotenv";
+// dotenv.config();
 
-const router = new Navigo("/");
+// const router = new Navigo("/");
 
-function render(state = store.Home) {
-  document.querySelector("#root").innerHTML = `
-    ${Header(state)}
-    ${Nav(store.Links)}
-    ${Main(state)}
-    ${Footer()}
-  `;
-  router.updatePageLinks();
-  afterRender();
-}
+// function render(state = store.Home) {
+//   document.querySelector("#root").innerHTML = `
+//     ${Header(state)}
+//     ${Main(state)}
+//     ${Footer()}
+//   `;
+//   router.updatePageLinks();
+//   afterRender();
+// }
 
-function afterRender() {
-  // add menu toggle to bars icon in nav bar
-  document.querySelector(".fa-bars").addEventListener("click", () => {
-    document.querySelector("nav > ul").classList.toggle("hidden--mobile");
-  });
-}
+// add sticky to header/nav bar
+// function afterRender() {
+window.addEventListener("scroll", function() {
+  const header = document.querySelector("header");
+  header.classList.toggle("sticky", window.scrollY > 0);
+});
+// add menu toggle to bars icon in nav bar
+const menu = document.querySelector(".menu");
+const menuBtn = document.querySelector(".menu-btn");
+const closeBtn = document.querySelector(".close-btn");
 
-router
-  .on({
-    "/": () => render(),
-    ":view": params => {
-      let view = capitalize(params.data.view);
-      render(store[view]);
-    }
-  })
-  .resolve();
+// open/close menu pop out
+menuBtn.addEventListener("click", () => {
+  menu.classList.add("active");
+});
+closeBtn.addEventListener("click", () => {
+  menu.classList.remove("active");
+});
+// }
+
+// router
+//   .on({
+//     "/": () => render(),
+//     ":view": params => {
+//       let view = capitalize(params.data.view);
+//       render(store[view]);
+//     }
+//   })
+//   .resolve();

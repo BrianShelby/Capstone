@@ -1,5 +1,6 @@
 import html from "html-literal";
 import * as links from "../store/Links";
+import logo from "../../assets/img/logo.png";
 
 export default state => html`
   <header>
@@ -23,3 +24,21 @@ export default state => html`
     </nav>
   </header>
 `;
+
+{
+  /* <header>
+<a href="#home"><img class="logo" src="${logo}" /></a>
+<div class="menu">
+  <div class="btn">
+    <i class="fas fa-times close-btn"></i>
+  </div>
+  <a href="#home">HOME</a>
+  <a href="#petition">PETITION</a>
+  <a href="#about">ABOUT</a>
+  <a href="#contact">CONTACT</a>
+  </div>
+<div class="btn">
+<i class="fas fa-bars menu-btn"></i>
+</div>
+</header> */
+}
