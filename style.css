@@ -120,15 +120,14 @@ header .logo{
   letter-spacing: 2px;
 }
 
-header .menu li ul{
+header .menu{
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  list-style-type: none;
 }
 
-header .menu a li ul{
+header .menu a{
   color: #fff;
   font-size: 16px;
   font-weight: 500;
@@ -138,7 +137,6 @@ header .menu a li ul{
   border-radius: 20px;
   transition: 0.3s;
   transition-property: color, background;
-  list-style-type: none;
 }
 
 header .menu a:hover{
