@@ -5,7 +5,7 @@ import logo from "../assets/img/logo.png";
 export default state => html`
   <header>
     <h1>${state.header}</h1>
-    <a href="#"><img class="logo" src="${logo}"/></a>
+    <a href="/"><img class="logo" src="${logo}"/></a>
     <div class="menu">
       <div class="btn">
         <i class="fas fa-times close-btn"></i>
