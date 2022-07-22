@@ -300,3 +300,9 @@ form select {
   text-transform: none;
 }
 
+h3{
+  text-align: center;
+  background: grey;
+  color: #fff;
+}
+

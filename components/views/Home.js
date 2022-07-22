@@ -1,7 +1,7 @@
 import html from "html-literal";
 import searchIcon from "../../assets/img/search.png";
 
-export default () => html`
+export default st => html`
   <section class="section-main">
     <h1>Welcome To YouVote</h1>
     <form action="" class="main-search">
@@ -12,6 +12,12 @@ export default () => html`
       <button type="submit"><img src="${searchIcon}" /></button>
     </form>
   </section>
+
+  <h3>
+    The weather in ${st.weather.city} is ${st.weather.description}. Temperature
+    is ${st.weather.temp}F, and it feels like ${st.weather.feelsLike}F.
+  </h3>
+
   <section class="section-two">
     <h2>Search For State Legislators</h2>
     <p>
