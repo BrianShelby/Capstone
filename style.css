@@ -120,11 +120,12 @@ header .logo{
   letter-spacing: 2px;
 }
 
-header .menu{
+header .menu ul{
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  list-style-type: none;
 }
 
 header .menu a ul{
@@ -207,6 +208,7 @@ header .menu .close-btn{
   font-size: 20px;
   margin: 20px;
   padding: 0 15px;
+  list-style-type: none;
  }
 }
 
