@@ -11,6 +11,12 @@ body{
   min-height: 100vh;
 }
 
+h3{
+  text-align: center;
+  background: grey;
+  color: #fff;
+}
+
 .section-main{
   position: relative;
   width: 100%;
@@ -41,7 +47,7 @@ body{
   flex: 1;
   border: 0;
   outline: none;
-  padding: 24px 24px;
+  padding: 20px 0px 0px 0px;
   font-size: 20px;
   color: #fff;
 }
@@ -300,9 +306,5 @@ form select {
   text-transform: none;
 }
 
-h3{
-  text-align: center;
-  background: grey;
-  color: #fff;
-}
+
 
