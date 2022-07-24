@@ -101,6 +101,7 @@ h2 a:hover{
   display: block;
   justify-content: left;
 }
+
 header{
   z-index: 999;
   position: fixed;
@@ -110,13 +111,22 @@ header{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 100px;
+  padding: 20px 200px 0px 0px;
   transition: 0.6s;
 }
 
 header.sticky{
   background: midnightblue;
-  padding: 15px 100px;
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 200px 0px 0px;
+  transition: 0.6s;
 }
 
 header .logo{
@@ -232,9 +242,9 @@ a{
 footer{
   background: midnightblue;
   color: #fff;
-  height: 80px;
+  height: 65px;
   box-sizing: border-box;
-  padding: 30px 0 0 20px;
+  padding: 20px 0 0 20px;
 }
 
 /* reset */
