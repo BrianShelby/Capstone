@@ -28,6 +28,9 @@ function afterRender() {
   const menu = document.querySelector(".menu");
   const menuBtn = document.querySelector(".menu-btn");
   const closeBtn = document.querySelector(".close-btn");
+  // const sendBtn = document.querySelector("#sendButton");
+  // const input = document.getElementById("#zipTextInput");
+  // const output = document.getElementById("#message");
 
   // open/close menu pop out
   menuBtn.addEventListener("click", () => {
@@ -36,6 +39,10 @@ function afterRender() {
   closeBtn.addEventListener("click", () => {
     menu.classList.remove("active");
   });
+
+  // sendBtn.addEventListener("click", () => {
+  //   input.innerHTML = output.value;
+  // });
 }
 
 router.hooks({

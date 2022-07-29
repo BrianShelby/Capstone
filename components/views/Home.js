@@ -4,13 +4,19 @@ import searchIcon from "../../assets/img/search.png";
 export default st => html`
   <section class="section-main">
     <h1>Welcome To YouVote</h1>
-    <form action="" class="main-search">
+    <input type="text" id="zipTextInput" />
+    <button id="sendButton">Search</button>
+    <h1 id="message"></h1>
+
+    <!-- <form action="/" class="main-search">
       <input
         type="text"
         placeholder="Enter Zip Code - Search For State Legislators"
       />
-      <button type="submit"><img src="${searchIcon}" /></button>
-    </form>
+      <button class="search-Btn" type="submit">
+        <img src="${searchIcon}" />
+      </button>
+    </form> -->
   </section>
   <h3>
     The weather in ${st.weather.city} is ${st.weather.description}, and the
