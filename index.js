@@ -32,6 +32,27 @@ function afterRender() {
   // const input = document.getElementById("#zipTextInput");
   // const output = document.getElementById("#message");
 
+  const form = document.querySelector("form");
+
+  form.addEventListener("submit", event => {
+    event.preventDefault();
+    console.log("The form was submitted!");
+
+    const inputs = event.target.elements;
+    // console.log("form's input elements: ", inputs);
+
+    // Array.from(inputs).forEach(input => {
+    //   console.log(
+    //     `This input is named ${input.name} and has a value of ${input.value}`
+    //   );
+    // });
+
+    //Save the Zipcode to store
+
+    store.Home.zip = inputs.zipTextInput.value;
+    console.log(store.Home.zip);
+  });
+
   // open/close menu pop out
   menuBtn.addEventListener("click", () => {
     menu.classList.add("active");
@@ -55,11 +76,15 @@ router.hooks({
     // Add a switch case statement to handle multiple routes
     switch (view) {
       case "Home": {
+        //Call zip variable here.
+        let zipCode = store.Home.zip;
+
         axios
           .get(
-            `https://api.openweathermap.org/data/2.5/weather?appid=${process.env.OPEN_WEATHER_MAP_API_KEY}&q=st%20louis&units=imperial`
+            `https://api.openweathermap.org/data/2.5/weather?appid=${process.env.OPEN_WEATHER_MAP_API_KEY}&zip=${zipCode},us&units=imperial`
           )
           .then(response => {
+            console.log(response);
             const roundWholeNumber = wholeNumber => Math.round(wholeNumber);
 
             store.Home.weather = {};

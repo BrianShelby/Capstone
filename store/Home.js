@@ -1,4 +1,4 @@
 export default {
   view: "Home",
-  zip: {}
+  zip: "63114"
 };
