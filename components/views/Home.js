@@ -13,7 +13,7 @@ export default st => html`
         type="text"
         id="zipTextInput"
         name="zipTextInput"
-        placeholder="Search for Legislator"
+        placeholder="Enter Zip Code to Find Your Legislator"
       />
       <button id="sendButton" class="search-Btn" type="submit">
         <img src="${searchIcon}" />
