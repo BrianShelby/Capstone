@@ -15,11 +15,11 @@ function render(state = store.Home) {
     ${Footer()}
   `;
   router.updatePageLinks();
-  afterRender();
+  afterRender(state);
 }
 
 // add sticky to header/nav bar
-function afterRender() {
+function afterRender(state) {
   window.addEventListener("scroll", function() {
     const header = document.querySelector("header");
     header.classList.toggle("sticky", window.scrollY > 0);
@@ -28,31 +28,39 @@ function afterRender() {
   const menu = document.querySelector(".menu");
   const menuBtn = document.querySelector(".menu-btn");
   const closeBtn = document.querySelector(".close-btn");
-  // const sendBtn = document.querySelector("#sendButton");
-  // const input = document.getElementById("#zipTextInput");
-  // const output = document.getElementById("#message");
 
-  const form = document.querySelector("form");
+  if (state.view === "Home") {
+    const form = document.querySelector("form");
 
-  form.addEventListener("submit", event => {
-    event.preventDefault();
-    console.log("The form was submitted!");
+    form.addEventListener("submit", event => {
+      event.preventDefault();
+      console.log("The form was submitted!");
 
-    const inputs = event.target.elements;
-    // console.log("form's input elements: ", inputs);
+      const inputs = event.target.elements;
 
-    // Array.from(inputs).forEach(input => {
-    //   console.log(
-    //     `This input is named ${input.name} and has a value of ${input.value}`
-    //   );
-    // });
+      //Save the Zipcode to store
 
-    //Save the Zipcode to store
+      store.Home.zip = inputs.zipTextInput.value;
+      axios
+        .get(
+          `https://api.openweathermap.org/data/2.5/weather?appid=${process.env.OPEN_WEATHER_MAP_API_KEY}&zip=${store.Home.zip},us&units=imperial`
+        )
+        .then(response => {
+          console.log(response);
+          const roundWholeNumber = wholeNumber => Math.round(wholeNumber);
 
-    store.Home.zip = inputs.zipTextInput.value;
-    console.log(store.Home.zip);
-  });
-
+          store.Home.weather = {};
+          store.Home.weather.city = response.data.name;
+          store.Home.weather.temp = roundWholeNumber(response.data.main.temp);
+          store.Home.weather.feelsLike = roundWholeNumber(
+            response.data.main.feels_like
+          );
+          store.Home.weather.description = response.data.weather[0].main;
+          router.navigate("Home");
+        })
+        .catch(err => console.log(err));
+    });
+  }
   // open/close menu pop out
   menuBtn.addEventListener("click", () => {
     menu.classList.add("active");
@@ -103,6 +111,14 @@ router.hooks({
         done();
       }
     }
+  },
+  already: params => {
+    const view =
+      params && params.data && params.data.view
+        ? capitalize(params.page)
+        : "Home";
+
+    render(store[view]);
   }
 });
 
