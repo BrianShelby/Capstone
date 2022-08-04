@@ -64,7 +64,18 @@ function afterRender(state) {
             response.data.main.feels_like
           );
           store.Home.weather.description = response.data.weather[0].main;
-          router.navigate("Home");
+          // router.navigate("Home");
+        })
+        .catch(err => console.log(err));
+
+      axios
+        .get(
+          `http://api.votesmart.org/Candidates.getByZip?key=${process.env.VOTE_SMART_API_KEY}&o=JSON&zip5=${store.Home.zip}`
+        )
+        .then(response => {
+          store.Search.legislators = response.data.candidateList.candidate;
+          console.log(store.Search.legislators);
+          router.navigate("Search");
         })
         .catch(err => console.log(err));
     });
