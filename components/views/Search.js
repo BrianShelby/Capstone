@@ -12,7 +12,8 @@ export default st => html`
         <th>Election Status</th>
       </tr>
       ${st.legislators.map(legislator => {
-        return `<tr><td>${legislator.firstName}</td><td>
+        return `<tr><td>
+          ${legislator.firstName}</td><td>
           ${legislator.lastName}</td><td>
           ${legislator.officeName}</td><td>
           ${legislator.electionOffice}</td><td>
