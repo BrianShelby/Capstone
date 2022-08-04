@@ -3,8 +3,8 @@ import * as store from "./store";
 import Navigo from "navigo";
 import { capitalize } from "lodash";
 import axios from "axios";
-// import dotenv from "dotenv";
-// dotenv.config();
+import dotenv from "dotenv";
+dotenv.config();
 
 const router = new Navigo("/");
 
@@ -28,6 +28,13 @@ function afterRender(state) {
   const menu = document.querySelector(".menu");
   const menuBtn = document.querySelector(".menu-btn");
   const closeBtn = document.querySelector(".close-btn");
+  // open/close menu pop out
+  menuBtn.addEventListener("click", () => {
+    menu.classList.add("active");
+  });
+  closeBtn.addEventListener("click", () => {
+    menu.classList.remove("active");
+  });
 
   if (state.view === "Home") {
     const form = document.querySelector("form");
@@ -61,17 +68,6 @@ function afterRender(state) {
         .catch(err => console.log(err));
     });
   }
-  // open/close menu pop out
-  menuBtn.addEventListener("click", () => {
-    menu.classList.add("active");
-  });
-  closeBtn.addEventListener("click", () => {
-    menu.classList.remove("active");
-  });
-
-  // sendBtn.addEventListener("click", () => {
-  //   input.innerHTML = output.value;
-  // });
 }
 
 router.hooks({
