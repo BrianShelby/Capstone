@@ -3,7 +3,7 @@ import html from "html-literal";
 export default st => html`
   <section id="legislator">
     <h1>Area Legislators</h1>
-    <table id="legislators">
+    <table class="searchRtn" id="legislators">
       <tr>
         <th>First Name</th>
         <th>Last Name</th>
