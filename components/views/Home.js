@@ -4,9 +4,6 @@ import searchIcon from "../../assets/img/search.png";
 export default st => html`
   <section class="section-main">
     <h1>Welcome To YouVote</h1>
-    <!-- <input type="text" id="zipTextInput" />
-    <button id="sendButton">Search</button>
-    <h1 id="message"></h1> -->
 
     <form action="" class="main-search">
       <input

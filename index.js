@@ -32,6 +32,7 @@ function afterRender(state) {
   menuBtn.addEventListener("click", () => {
     menu.classList.add("active");
   });
+  // close menu pop out
   closeBtn.addEventListener("click", () => {
     menu.classList.remove("active");
   });

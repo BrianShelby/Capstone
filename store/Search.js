@@ -1,4 +1,4 @@
 export default {
   view: "Search",
-  legislators: {}
+  legislators: []
 };
