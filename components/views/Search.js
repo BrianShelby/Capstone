@@ -19,7 +19,7 @@ export default st () => html`
           ${legislator.electionOffice}</td><td>
           ${legislator.electionStatus}</td></tr>`;
         })
-        .join("")}
+        }
     </table>
   </section>
 `;
