@@ -70,7 +70,7 @@ function afterRender(state) {
 
       axios
         .get(
-          `http://api.votesmart.org/Candidates.getByZip?key=${process.env.VOTE_SMART_API_KEY}&o=JSON&zip5=${store.Home.zip}`
+          `https://api.votesmart.org/Candidates.getByZip?key=${process.env.VOTE_SMART_API_KEY}&o=JSON&zip5=${store.Home.zip}`
         )
         .then(response => {
           store.Search.legislators = response.data.candidateList.candidate;
