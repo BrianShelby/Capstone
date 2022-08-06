@@ -1,26 +1,21 @@
 const mongoose = require("mongoose");
 
 const legislatorSchema = new mongoose.Schema({
-  customer: {
-    type: String,
-    required: true,
-    validate: /^[A-Za-z0-9 ]*$/
+  firstName: {
+    type: String
   },
-  crust: {
-    type: String,
-    required: true,
-    enum: ["thin", "chicago", "deep-dish", "hella-thick"]
+  lastName: {
+    type: String
   },
-  cheese: {
-    type: String,
-    validate: /^[A-Za-z0-9 ]*$/
+  officeName: {
+    type: String
   },
-  sauce: {
-    type: String,
-    required: true,
-    validate: /^[A-Za-z0-9 ]*$/
+  electionOffice: {
+    type: String
   },
-  toppings: [String]
+  electionStatus: {
+    type: String
+  }
 });
 
 const Legislator = mongoose.model("Legislator", legislatorSchema);
