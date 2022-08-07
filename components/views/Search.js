@@ -1,9 +1,9 @@
 import html from "html-literal";
 
 export default st => html`
-  <section id="legislator">
+  <section class="section-main">
     <h1>Area Legislators</h1>
-    <table class="searchRtn" id="legislators">
+    <table>
       <tr>
         <th>First Name</th>
         <th>Last Name</th>
