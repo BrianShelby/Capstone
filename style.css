@@ -17,6 +17,28 @@ h3{
   color: #fff;
 }
 
+.candidate-container1{
+  color: #fff;
+  max-width: 600px;
+  margin: 0 0 10px 0;
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  padding-bottom: 10px;
+  font-size: 20px;
+  font-weight:600;
+}
+
+.candidate-container2{
+  color: #fff;
+  background: grey;
+  border: 1px solid #000;
+  max-width: 600px;
+  margin: 0 0 10px 0;
+  padding: 2px;
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+}
+
 .section-main{
   position: relative;
   width: 100%;
@@ -29,7 +51,7 @@ h3{
   justify-content:center;
   align-items:center;
   padding: 20px 100px;
-  color: #fff;
+  color: #000;
 }
 
 .main-search{
@@ -110,9 +132,9 @@ header{
   left: 0;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content:space-around;
   align-items: center;
-  padding: 20px 200px 0px 0px;
+  padding: 20px 100px 0px 0px;
   transition: 0.6s;
 }
 
@@ -124,9 +146,9 @@ header.sticky{
   left: 0;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  padding: 20px 200px 0px 0px;
+  padding: 20px 100px 0px 0px;
   transition: 0.6s;
 }
 
@@ -232,6 +254,14 @@ header .menu .close-btn{
   .section-main h1{
     font-size: 50px;
     line-height: 60px;
+  }
+  .candidate-container1{
+    max-width: 300px;
+    grid-template-columns: 100px 100px 100px;
+  }
+  .candidate-container2{
+    max-width: 300px;
+    grid-template-columns: 100px 100px 100px;
   }
 }
 
