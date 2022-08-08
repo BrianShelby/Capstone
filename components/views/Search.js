@@ -9,13 +9,16 @@ export default st => html`
       <div class="candidate-heading2">Last Name</div>
       <div class="candidate-heading3">Election Office</div>
     </div>
-    ${st.legislators.map(legislator => {
-      return `
+    ${st.legislators
+      .map(legislator => {
+        return `
           <div class="candidate-container2">
           <div class="candidate-content1">${legislator.firstName}</div>
           <div class="candidate-content2">${legislator.lastName}</div>
           <div class="candidate-content3">${legislator.electionOffice}</div>
-          </div>`;
-    })}
+          </div>
+          `;
+      })
+      .join("")}
   </section>
 `;
