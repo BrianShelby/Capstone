@@ -90,6 +90,31 @@ h3{
   cursor: pointer;
 }
 
+.candidateCard{
+  width: auto;
+  height: auto;
+  background: midnightblue;
+  margin-bottom: 150px;
+  padding: 50px;
+}
+
+.legislatorImg{
+  padding-bottom: 15px;
+  border-radius: 22%;
+  display: block;
+  justify-content: center;
+}
+
+.bioProfile{
+  color: #fff;
+  padding: 0px 0px 15px 5px;
+}
+
+p{
+  color: #fff;
+  padding: 0px 0px 15px 5px;
+}
+
 .section-main h1{
   color: #fff;
   font-size: 60px;

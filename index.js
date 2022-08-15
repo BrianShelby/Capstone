@@ -86,7 +86,7 @@ router.hooks({
   before: (done, params) => {
     const view =
       params && params.data && params.data.view
-        ? capitalize(params.page)
+        ? capitalize(params.data.view)
         : "Home";
 
     // Add a switch case statement to handle multiple routes
@@ -115,6 +115,33 @@ router.hooks({
           .catch(err => console.log(err));
         break;
       }
+
+      case "Legbio":
+        axios
+          .get(
+            `https://api.votesmart.org/CandidateBio.getBio?key=${process.env.VOTE_SMART_API_KEY}&o=JSON&candidateId=${params.data.candidateId}`
+          )
+          .then(response => {
+            store.Legbio.legBio = response.data.bio.candidate;
+            console.log(store.Legbio.legBio);
+            done();
+          })
+          .catch(err => console.log(err));
+        break;
+
+      // case "Legbiodetail":
+      //   axios
+      //     .get(
+      //       `https://api.votesmart.org/CandidateBio.getDetailedBio?key=${process.env.VOTE_SMART_API_KEY}&o=JSON&candidateId=${params.data.candidateId}`
+      //     )
+      //     .then(response => {
+      //       store.Legbiodetail.legBio = response.data.bio.candidate;
+      //       console.log(store.Legbiodetail.legBio);
+      //       done();
+      //     })
+      //     .catch(err => console.log(err));
+      //   break;
+
       default: {
         done();
       }
@@ -133,6 +160,10 @@ router.hooks({
 router
   .on({
     "/": () => render(),
+    ":view/:candidateId": params => {
+      let view = capitalize(params.data.view);
+      render(store[view]);
+    },
     ":view": params => {
       let view = capitalize(params.data.view);
       render(store[view]);

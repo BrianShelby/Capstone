@@ -4,3 +4,4 @@ export { default as Bio } from "./Bio";
 export { default as Contact } from "./Contact";
 export { default as Links } from "./Links";
 export { default as Search } from "./Search";
+export { default as Legbio } from "./Legbio";
