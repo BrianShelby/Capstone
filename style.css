@@ -95,14 +95,14 @@ h3{
   height: auto;
   background: midnightblue;
   margin-bottom: 150px;
+  border: 18px solid #fff;
+  border-radius: 10px;
   padding: 50px;
 }
 
 .legislatorImg{
   padding-bottom: 15px;
-  border-radius: 22%;
-  display: block;
-  justify-content: center;
+  border-radius: 10px;
 }
 
 .bioProfile{
