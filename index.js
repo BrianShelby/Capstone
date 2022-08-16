@@ -90,6 +90,7 @@ function afterRender(state) {
 
       const inputs = event.target.elements;
       console.log("inputs", inputs);
+
       const requestData = {
         fullName: inputs.fullName.value,
         email: inputs.email.value,
@@ -100,6 +101,7 @@ function afterRender(state) {
       axios
         .post(`${process.env.MONGODB}`, requestData)
         .then(response => {
+          router.navigate("/Contact");
           console.log(response);
         })
         .catch(error => {
