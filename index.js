@@ -80,6 +80,33 @@ function afterRender(state) {
         .catch(err => console.log(err));
     });
   }
+
+  if (state.view === "Contact") {
+    const form = document.querySelector("form");
+
+    form.addEventListener("submit", event => {
+      event.preventDefault();
+      console.log("The form was submitted!");
+
+      const inputs = event.target.elements;
+      console.log("inputs", inputs);
+      const requestData = {
+        fullName: inputs.fullName.value,
+        email: inputs.email.value,
+        message: inputs.message.value
+      };
+      console.log("request Body", requestData);
+
+      axios
+        .post(`${process.env.MONGODB}`, requestData)
+        .then(response => {
+          console.log(response);
+        })
+        .catch(error => {
+          console.log("It puked", error);
+        });
+    });
+  }
 }
 
 router.hooks({

@@ -14,16 +14,16 @@ export default () => html`
         <label for="full-name">Full Name</label>
         <input
           type="text"
-          name="name"
-          id="full-name"
+          name="fullName"
+          id="fullName"
           placeholder="First and Last"
           required=""
         />
         <label for="email-address">Email Address</label>
         <input
           type="email"
-          name="_reply"
-          id="email-address"
+          name="email"
+          id="email"
           placeholder="youremail@xxxx.com"
           required=""
         />
@@ -42,7 +42,7 @@ export default () => html`
           value="Contact Form Submission"
         />
       </fieldset>
-      <input type="submit" value="Submit" />
+      <input type="Submit" value="Submit" name="Submit" />
     </form>
   </section>
 `;
