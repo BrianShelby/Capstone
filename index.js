@@ -99,7 +99,7 @@ function afterRender(state) {
       console.log("request Body", requestData);
 
       axios
-        .post(`${process.env.MONGODB}`, requestData)
+        .post(`${process.env.CAPSTONE_API}/contacts`, requestData)
         .then(response => {
           console.log(response.data);
           router.navigate("/Contact");

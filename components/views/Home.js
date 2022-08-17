@@ -27,27 +27,6 @@ export default st => html`
     temperature is ${st.weather.temp}°F, and it feels like
     ${st.weather.feelsLike}°F.
   </h3>
-  <section class="section-two">
-    <h2>Search For State Legislators</h2>
-    <p>
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae cumque
-      dignissimos, aut molestiae aliquam laboriosam nesciunt voluptas molestias
-      deleniti iure obcaecati qui sunt nostrum dolor eum ratione, esse,
-      exercitationem id!
-    </p>
-    <h2>File A Petition</h2>
-    <p>
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae cumque
-      dignissimos, aut molestiae aliquam laboriosam nesciunt voluptas molestias
-      deleniti iure obcaecati qui sunt nostrum dolor eum ratione, esse,
-      exercitationem id!
-    </p>
-    <h2>Review upcoming legislation</h2>
-    <p>
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae cumque
-      dignissimos, aut molestiae aliquam laboriosam nesciunt voluptas molestias
-      deleniti iure obcaecati qui sunt nostrum dolor eum ratione, esse,
-      exercitationem id!
-    </p>
+
   </section>
 `;
