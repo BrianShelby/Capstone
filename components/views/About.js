@@ -3,7 +3,7 @@ import Bio1 from "../../assets/img/Bio1.jpg";
 
 export default () => html`
   <section class="section-main">
-    <h1>Brian Shelby Bio</h1>
+    <h1>About Brian Shelby</h1>
     <div><img class="bioPic" src="${Bio1}" alt="" /></div>
     <h2>
       Hi! My name is Brian Shelby. I have a background in manufacturing, where

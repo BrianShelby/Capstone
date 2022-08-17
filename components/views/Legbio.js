@@ -40,11 +40,11 @@ export default st => html`
         </p>
         <h4 class="bioProfile">Education:</h4>
         <p>
-          ${st.legBio.education}
+          ${st.legBio.education.institution}
         </p>
         <h4 class="bioProfile">Political Experience:</h4>
         <p>
-          ${st.legBio.politicalExperience}
+          ${st.legBio.political.experience}
         </p>
         <h4 class="bioProfile">Current Legislative Committees:</h4>
         <p>

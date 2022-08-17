@@ -165,7 +165,7 @@ router.hooks({
       case "Legbio":
         axios
           .get(
-            `https://api.votesmart.org/CandidateBio.getBio?key=${process.env.VOTE_SMART_API_KEY}&o=JSON&candidateId=${params.data.candidateId}`
+            `https://api.votesmart.org/CandidateBio.getDetailedBio?key=${process.env.VOTE_SMART_API_KEY}&o=JSON&candidateId=${params.data.candidateId}`
           )
           .then(response => {
             store.Legbio.legBio = response.data.bio.candidate;

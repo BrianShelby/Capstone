@@ -4,17 +4,16 @@ import searchIcon from "../../assets/img/search.png";
 export default st => html`
   <section class="section-main">
     <h1>Welcome To YouVote</h1>
-    <p>
-      YouVote is an application where you can search for legislators in your
-      state and federal
-    </p>
+    <h2>
+      YouVote's goal is to provide it's users with unbiased information about candidates and elected officials to better inform voters before going to the ballot box. Just enter your zip code to find your state and federal legislators.
+    </h2>
 
     <form action="" class="main-search">
       <input
         type="text"
         id="zipTextInput"
         name="zipTextInput"
-        placeholder="Enter Zip Code to Find Your Legislators"
+        placeholder="Enter Your Zip Code"
       />
       <button id="sendButton" class="search-Btn" type="submit">
         <img src="${searchIcon}" />

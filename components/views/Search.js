@@ -3,6 +3,7 @@ import html from "html-literal";
 export default st => html`
   <section class="section-main">
     <h1>State & Federal Legislators</h1>
+    <h2>Click on a Legislator to View Bio</h2>
 
     <div class="candidate-container1">
       <div class="candidate-heading1">Candidate Name</div>
