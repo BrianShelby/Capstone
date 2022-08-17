@@ -8,7 +8,7 @@ const app = express();
 
 dotenv.config();
 
-const PORT = process.env.PORT || "4040";
+const PORT = process.env.PORT || 4040;
 
 //Connect to Database
 mongoose.connect(process.env.MONGODB);
