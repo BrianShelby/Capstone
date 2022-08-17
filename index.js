@@ -144,6 +144,24 @@ router.hooks({
         break;
       }
 
+      // let one =
+      //   "https://api.votesmart.org/CandidateBio.getBio?key=${process.env.VOTE_SMART_API_KEY}&o=JSON&candidateId=${params.data.candidateId}"
+      // let two =
+      //   "https://api.votesmart.org/CandidateBio.getDetailedBio?key=${process.env.VOTE_SMART_API_KEY}&o=JSON&candidateId=${params.data.candidateId}"
+
+      // const requestOne = axios.get(one);
+      // const requestTwo = axios.get(two);
+
+      // axios.all([requestOne, requestTwo]).then(
+      //   axios.spread((...responses) => {
+      //     const responseOne = responses[0];
+      //     const responseTwo = responses[1];
+      //   })).catch(errors => {
+
+      //   })
+      // );
+      // break;
+
       case "Legbio":
         axios
           .get(
