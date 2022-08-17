@@ -8,11 +8,14 @@ const app = express();
 
 dotenv.config();
 
-const PORT = process.env.PORT || 4040; // we use || to provide a default value
+const PORT = process.env.PORT || "4040";
 
 //Connect to Database
 mongoose.connect(process.env.MONGODB);
 const db = mongoose.connection;
+
+// let db_status = "MongoDB connection not successful.";
+
 db.on("error", console.error.bind(console, "Connection Error:"));
 db.once(
   "open",
@@ -62,4 +65,5 @@ app.use("/contacts", contacts);
 
 // Tell the Express app to start listening
 // Let the humans know I am running and listening on 4040
+
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));

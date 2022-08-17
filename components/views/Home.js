@@ -4,6 +4,10 @@ import searchIcon from "../../assets/img/search.png";
 export default st => html`
   <section class="section-main">
     <h1>Welcome To YouVote</h1>
+    <p>
+      YouVote is an application where you can search for legislators in your
+      state and federal
+    </p>
 
     <form action="" class="main-search">
       <input

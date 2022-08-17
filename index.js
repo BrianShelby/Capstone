@@ -101,8 +101,8 @@ function afterRender(state) {
       axios
         .post(`${process.env.MONGODB}`, requestData)
         .then(response => {
+          console.log(response.data);
           router.navigate("/Contact");
-          console.log(response);
         })
         .catch(error => {
           console.log("It puked", error);
