@@ -2,7 +2,7 @@ import html from "html-literal";
 
 export default st => html`
   <section class="section-main">
-    <h1>${st.legBio.firstName} ${st.legBio.lastName}'s Biography</h1>
+    <h1>${st.legBio.firstName} ${st.legBio.lastName}'s Bio</h1>
     <div class="candidateCard">
       <div>
         <img class="legislatorImg" src="${st.legBio.photo}" />
@@ -40,7 +40,7 @@ export default st => html`
         </p>
         <h4 class="bioProfile">Education:</h4>
         <p>
-          ${st.legBio.education.institution}
+           ${st.legBio.education.institution}
         </p>
         <h4 class="bioProfile">Political Experience:</h4>
         <p>
