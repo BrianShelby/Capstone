@@ -40,13 +40,21 @@ export default st => html`
         </p>
         <h4 class="bioProfile">Education:</h4>
         <p>
-           ${st.legBio.education.institution}
+           ${st.legBio.education.institution
+             .map(ed => {
+               return `${ed.fullText}<br>`;
+             })
+             .join("")}
         </p>
         <h4 class="bioProfile">Political Experience:</h4>
         <p>
-          ${st.legBio.political.experience}
+           ${st.legBio.political.experience
+             .map(poli => {
+               return `${poli.fullText}<br>`;
+             })
+             .join("")}
         </p>
-        <h4 class="bioProfile">Current Legislative Committees:</h4>
+              <h4 class="bioProfile">Current Legislative Committees:</h4>
         <p>
           ${st.legBio.currentCommittees}
         </p>
