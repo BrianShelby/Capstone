@@ -29,7 +29,7 @@ export default st => {
 
   return html`
   <section class="section-main">
-    <h1>${st.legBio.firstName} ${st.legBio.lastName}'s Bio</h1>
+    <h1>${st.legBio.firstName} ${st.legBio.lastName} (Bio)</h1>
     <div class="candidateCard">
       <div>
         <img class="legislatorImg" src="${st.legBio.photo}" />
