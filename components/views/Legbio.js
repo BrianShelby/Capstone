@@ -1,6 +1,33 @@
 import html from "html-literal";
 
-export default st => html`
+export default st => {
+  let political = [{ fullText: "N/A" }];
+  let education = [{ fullText: "N/A" }];
+  let congMembership = [{ fullText: "N/A" }];
+  let orgMembership = [{ fullText: "N/A" }];
+  let profession = [{ fullText: "N/A" }];
+
+  if (Array.isArray(st.legBio.political.experience)) {
+    political = st.legBio.political.experience;
+  }
+
+  if (Array.isArray(st.legBio.congMembership.experience)) {
+    congMembership = st.legBio.congMembership.experience;
+  }
+
+  if (Array.isArray(st.legBio.orgMembership.experience)) {
+    orgMembership = st.legBio.orgMembership.experience;
+  }
+
+  if (Array.isArray(st.legBio.education.institution)) {
+    education = st.legBio.education.institution;
+  }
+
+  if (Array.isArray(st.legBio.profession.experience)) {
+    profession = st.legBio.profession.experience;
+  }
+
+  return html`
   <section class="section-main">
     <h1>${st.legBio.firstName} ${st.legBio.lastName}'s Bio</h1>
     <div class="candidateCard">
@@ -40,7 +67,7 @@ export default st => html`
         </p>
         <h4 class="bioProfile">Education:</h4>
         <p>
-           ${st.legBio.education.institution
+           ${education
              .map(ed => {
                return `${ed.fullText}<br><br>`;
              })
@@ -48,7 +75,7 @@ export default st => html`
         </p>
         <h4 class="bioProfile">Political Experience:</h4>
         <p>
-           ${st.legBio.political.experience
+           ${political
              .map(politics => {
                return `${politics.fullText}<br><br>`;
              })
@@ -56,7 +83,7 @@ export default st => html`
         </p>
         <h4 class="bioProfile">Legislative Committee Experience:</h4>
         <p>
-        ${st.legBio.congMembership.experience
+        ${congMembership
           .map(committee => {
             return `${committee.fullText}<br><br>`;
           })
@@ -64,7 +91,7 @@ export default st => html`
         </p>
         <h4 class="bioProfile">Professional Experience:</h4>
         <p>
-        ${st.legBio.profession.experience
+        ${profession
           .map(pro => {
             return `${pro.fullText}<br><br>`;
           })
@@ -72,7 +99,7 @@ export default st => html`
         </p>
         <h4 class="bioProfile">Organizational Memberships:</h4>
         <p>
-        ${st.legBio.orgMembership.experience
+        ${orgMembership
           .map(member => {
             return `${member.fullText}<br><br>`;
           })
@@ -83,4 +110,5 @@ export default st => html`
       </div>
     </div>
   </section>
-`;
+  `;
+};
