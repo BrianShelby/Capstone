@@ -42,33 +42,41 @@ export default st => html`
         <p>
            ${st.legBio.education.institution
              .map(ed => {
-               return `${ed.fullText}<br>`;
+               return `${ed.fullText}<br><br>`;
              })
              .join("")}
         </p>
         <h4 class="bioProfile">Political Experience:</h4>
         <p>
            ${st.legBio.political.experience
-             .map(poli => {
-               return `${poli.fullText}<br>`;
+             .map(politics => {
+               return `${politics.fullText}<br><br>`;
              })
              .join("")}
         </p>
-              <h4 class="bioProfile">Current Legislative Committees:</h4>
+        <h4 class="bioProfile">Legislative Committee Experience:</h4>
         <p>
-          ${st.legBio.currentCommittees}
+        ${st.legBio.congMembership.experience
+          .map(committee => {
+            return `${committee.fullText}<br><br>`;
+          })
+          .join("")}
         </p>
         <h4 class="bioProfile">Professional Experience:</h4>
         <p>
-          ${st.legBio.proExperience}
+        ${st.legBio.profession.experience
+          .map(pro => {
+            return `${pro.fullText}<br><br>`;
+          })
+          .join("")}
         </p>
-        <h4 class="bioProfile">Memberships:</h4>
+        <h4 class="bioProfile">Organizational Memberships:</h4>
         <p>
-          ${st.legBio.memberships}
-        </p>
-        <h4 class="bioProfile">Additional Information:</h4>
-        <p>
-          ${st.legBio.additionalInfo}
+        ${st.legBio.orgMembership.experience
+          .map(member => {
+            return `${member.fullText}<br><br>`;
+          })
+          .join("")}
         </p>
       </div>
       </div>
